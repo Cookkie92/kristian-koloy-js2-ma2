@@ -1,5 +1,3 @@
-// import { books } from "./components/array.js";
-
 let books = [
   {
     isbn: "1600506460320",
@@ -21,11 +19,12 @@ let books = [
 
 const listContainer = document.querySelector(".list-result");
 const button = document.querySelector("button");
+const emptyContainer = document.querySelector(".empty-error");
 function createList() {
   listContainer.innerHTML = "";
   books.forEach(function (item) {
     listContainer.innerHTML += `
-    <li >${item.title}  <i id="${item.isbn}" href="#">X</i> </li>
+    <li>${item.title}  <i id="${item.isbn}" href="#">X</i> </li>
 
      `;
   });
@@ -49,7 +48,7 @@ function removeFromList() {
   });
 
   books = newList;
-  const emptyContainer = document.querySelector(".empty-error");
+
   if (newList.length === 0) {
     console.log("no items left");
     emptyContainer.innerHTML = `No books left :(`;

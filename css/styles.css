@@ -6,11 +6,11 @@ li {
   margin: 10px;
   list-style: none;
   font-size: 20px;
+  font-weight: bold;
 }
 li i {
-  position: relative;
-  float: right;
-  right: 45%;
+  position: absolute;
+  right: 40%;
   cursor: pointer;
   margin-left: 10px;
   color: red;
@@ -31,4 +31,16 @@ header a {
   text-align: center;
   text-decoration: none;
   color: rgb(41, 41, 41);
+}
+@media (max-width: 767px) {
+  li i {
+    position: absolute;
+    right: 35%;
+  }
+}
+@media (max-width: 500px) {
+  li i {
+    position: absolute;
+    right: 25%;
+  }
 }
