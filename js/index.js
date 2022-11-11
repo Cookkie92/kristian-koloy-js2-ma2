@@ -22,20 +22,14 @@ let books = [
 const listContainer = document.querySelector(".list-result");
 const button = document.querySelector("button");
 function createList() {
-  //   for (let i = 0; i < books.length; i++) {
-  //     console.log(books[i]);
-  //     listContainer.innerHTML += `
-  //     <li><span>${books[i].title}</span>  <i href="#">Remove</i> </li>
-
-  // //     `;
-  //   }
   listContainer.innerHTML = "";
   books.forEach(function (item) {
     listContainer.innerHTML += `
-    <li ><span>${item.title}</span>  <i id="${item.isbn}" href="#">Remove</i> </li>
+    <li ><h4>${item.title}</h4>  <i id="${item.isbn}" href="#">Remove</i> </li>
 
      `;
   });
+
   const trashCans = document.querySelectorAll("i");
   trashCans.forEach(function (can) {
     can.addEventListener("click", removeFromList);
@@ -55,6 +49,10 @@ function removeFromList() {
   });
 
   books = newList;
-
+  const emptyContainer = document.querySelector(".empty-error");
+  if (newList.length === 0) {
+    console.log("no items left");
+    emptyContainer.innerHTML = `No books left`;
+  }
   createList();
 }
