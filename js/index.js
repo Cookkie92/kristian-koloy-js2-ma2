@@ -25,7 +25,7 @@ function createList() {
   listContainer.innerHTML = "";
   books.forEach(function (item) {
     listContainer.innerHTML += `
-    <li >${item.title}  <i id="${item.isbn}" href="#">Remove</i> </li>
+    <li >${item.title}  <i id="${item.isbn}" href="#">X</i> </li>
 
      `;
   });
