@@ -25,6 +25,7 @@ li i:hover {
 .empty-error {
   font-size: 30px;
   margin: 50px;
+  color: rgb(250, 67, 67);
 }
 header a {
   text-align: center;

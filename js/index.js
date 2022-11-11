@@ -52,7 +52,7 @@ function removeFromList() {
   const emptyContainer = document.querySelector(".empty-error");
   if (newList.length === 0) {
     console.log("no items left");
-    emptyContainer.innerHTML = `No books left`;
+    emptyContainer.innerHTML = `No books left :(`;
   }
   createList();
 }
